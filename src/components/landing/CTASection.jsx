@@ -6,7 +6,7 @@ const CTASection = () => {
   return (
     <section className="w-full px-4">
       <div className="w-full max-w-7xl mx-auto px-16">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg">
+        <div className="bg-gray rounded-xl border border-gray-200 p-6 shadow-lg">
           
           <div className="text-center mb-6">
             <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">

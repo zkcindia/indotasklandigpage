@@ -128,7 +128,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="w-full max-w-7xl mx-auto mb-16">
+    <section className="w-full max-w-7xl mx-auto mb-16 bg-gray-50">
       <div className="w-full max-w-7xl mx-auto">
 
         {/* Header */}
