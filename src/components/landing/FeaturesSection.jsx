@@ -1,70 +1,3 @@
-// // src/components/landing/FeaturesSection.jsx
-// import React from "react";
-// import { Users2, ListChecks, BarChart3 } from "lucide-react";
-
-// const features = [
-//   {
-//     icon: Users2,
-//     title: "Employee lists",
-//     desc: "Group tasks by people or stores and see status at a glance.",
-//   },
-//   {
-//     icon: ListChecks,
-//     title: "Templates",
-//     desc: "Create once: Daily Open/Close, Display Reset, Service Ticket, and more.",
-//   },
-//   {
-//     icon: BarChart3,
-//     title: "KPIs & SLAs",
-//     desc: "Auto-track overdue, completion rate, and time-to-verify with alerts.",
-//   },
-// ];
-
-// export default function FeaturesSection() {
-//   return (
-//     <section id="features" className="max-w-7xl mx-auto py-10">
-//       {/* Heading */}
-//       <div className="text-center max-w-2xl mx-auto">
-//         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-//           Everything your team needs
-//         </h2>
-//         <p className="mt-3 text-gray-500">
-//           From assigning work to verifying and closing the loop—optimized for fast-moving stores.
-//         </p>
-//       </div>
-
-//       {/* Cards */}
-//       <div className="mt-10 grid gap-6 md:grid-cols-3">
-//         {features.map((f, i) => {
-//           const Icon = f.icon;
-//           return (
-//             <div
-//               key={i}
-//               className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition"
-//             >
-//               {/* Icon */}
-//               <div className="h-10 w-10 rounded-xl bg-blue-100 flex items-center justify-center">
-//                 <Icon className="h-5 w-5 text-blue-600" />
-//               </div>
-
-//               {/* Title */}
-//               <h3 className="mt-4 text-lg font-semibold text-gray-900">
-//                 {f.title}
-//               </h3>
-
-//               {/* Description */}
-//               <p className="mt-2 text-sm text-gray-500">
-//                 {f.desc}
-//               </p>
-//             </div>
-//           );
-//         })}
-//       </div>
-//     </section>
-//   );
-// }
-
-
 // src/components/landing/FeaturesSection.jsx
 import {
   FaTasks,
@@ -73,118 +6,192 @@ import {
   FaCheckDouble,
   FaEye,
   FaSyncAlt,
+  FaCamera,
+  FaChartLine,
+  FaBolt,
+  FaMobileAlt,
 } from "react-icons/fa";
+import { useState } from "react";
 
 export default function FeaturesSection() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   const features = [
     {
       icon: FaTasks,
       title: "Task Management",
       desc: "Create, assign, and track tasks with clear ownership and deadlines.",
-      ring: "from-blue-500 to-indigo-500",
-      bg: "bg-blue-50",
+      bg: "from-blue-100 to-blue-50",
       color: "text-blue-600",
-    },
-    {
-      icon: FaUsers,
-      title: "Team Collaboration",
-      desc: "Keep employees and managers aligned with shared task views.",
-      ring: "from-purple-500 to-pink-500",
-      bg: "bg-purple-50",
-      color: "text-purple-600",
+      iconBg: "bg-blue-500/10",
+      gradient: "bg-gradient-to-br from-blue-500 to-blue-600",
     },
     {
       icon: FaCheckDouble,
       title: "Task Verification",
-      desc: "Verify work before completion to maintain accountability.",
-      ring: "from-green-500 to-emerald-500",
-      bg: "bg-green-50",
-      color: "text-green-600",
+      desc: "Verify work before completion to ensure accountability.",
+      bg: "from-emerald-100 to-emerald-50",
+      color: "text-emerald-600",
+      iconBg: "bg-emerald-500/10",
+      gradient: "bg-gradient-to-br from-emerald-500 to-emerald-600",
     },
     {
       icon: FaEye,
       title: "Manager Visibility",
       desc: "Monitor progress, delays, and team performance in real time.",
-      ring: "from-yellow-500 to-orange-500",
-      bg: "bg-yellow-50",
-      color: "text-yellow-600",
+      bg: "from-amber-100 to-amber-50",
+      color: "text-amber-600",
+      iconBg: "bg-amber-500/10",
+      gradient: "bg-gradient-to-br from-amber-500 to-amber-600",
     },
     {
       icon: FaUserShield,
       title: "Admin Control",
-      desc: "Manage users, permissions, and workflows from one place.",
-      ring: "from-red-500 to-rose-500",
-      bg: "bg-red-50",
-      color: "text-red-600",
+      desc: "Manage users, permissions, and workflows from one dashboard.",
+      bg: "from-rose-100 to-rose-50",
+      color: "text-rose-600",
+      iconBg: "bg-rose-500/10",
+      gradient: "bg-gradient-to-br from-rose-500 to-rose-600",
     },
     {
-      icon: FaSyncAlt,
-      title: "Recurring Tasks",
-      desc: "Automate daily, weekly, or monthly tasks effortlessly.",
-      ring: "from-indigo-500 to-cyan-500",
-      bg: "bg-indigo-50",
+      icon: FaChartLine,
+      title: "Daily Reports",
+      desc: "Auto-generated daily reports with task updates and activity tracking.",
+      bg: "from-teal-100 to-teal-50",
+      color: "text-teal-600",
+      iconBg: "bg-teal-500/10",
+      gradient: "bg-gradient-to-br from-teal-500 to-teal-600",
+    },
+    {
+      icon: FaCamera,
+      title: "Image Upload",
+      desc: "Upload images as task proof for transparent and accurate verification.",
+      bg: "from-violet-100 to-violet-50",
+      color: "text-violet-600",
+      iconBg: "bg-violet-500/10",
+      gradient: "bg-gradient-to-br from-violet-500 to-violet-600",
+    },
+    {
+      icon: FaBolt,
+      title: "Repeat Shortcut",
+      desc: "Create recurring tasks instantly for daily, weekly, or monthly work.",
+      bg: "from-indigo-100 to-indigo-50",
       color: "text-indigo-600",
+      iconBg: "bg-indigo-500/10",
+      gradient: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+    },
+    {
+      icon: FaMobileAlt,
+      title: "IndoTask App",
+      desc: "Manage tasks, upload images, and verify work directly from the mobile app.",
+      bg: "from-orange-100 to-orange-50",
+      color: "text-orange-600",
+      iconBg: "bg-orange-500/10",
+      gradient: "bg-gradient-to-br from-orange-500 to-orange-600",
     },
   ];
 
   return (
-    <section className="w-full max-w-7xl mx-auto mb-16 bg-gray-50">
-      <div className="w-full max-w-7xl mx-auto">
-
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-green-600 uppercase tracking-wide">
-            Features
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-3">
-            Discover IndoTask key features
+    <section id="features" className="w-full py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header - Just slightly smaller */}
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+            <span className="text-sm font-semibold text-green-600 uppercase tracking-wider">
+              Powerful Features
+            </span>
+            <span className="w-2 h-2 rounded-full bg-green-500"></span>
+          </div>
+          
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+            Everything you need to
+            <span className="relative inline-block ml-2">
+              <span className="relative z-10">run tasks efficiently</span>
+              <svg className="absolute -bottom-1 left-0 w-full h-2 text-green-500/40" viewBox="0 0 500 20">
+                <path d="M0,10 Q50,5 100,10 T200,10" fill="none" stroke="currentColor" strokeWidth="8"/>
+              </svg>
+            </span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-            IndoTask helps teams stay organized, accountable, and productive
-            with simple yet powerful task workflows.
+          
+          <p className="text-gray-600 mt-4 text-base max-w-2xl mx-auto">
+            IndoTask combines task execution, verification, reporting, and automation
+            into one simple platform designed for modern teams.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {features.map((item, i) => {
+        {/* Feature Grid - Just slightly smaller */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((item, index) => {
             const Icon = item.icon;
+            const isHovered = hoveredIndex === index;
+            
             return (
               <div
-                key={i}
-                className="bg-white border rounded-2xl p-8 text-center
-                           shadow-sm hover:shadow-xl transition-all duration-300
-                           hover:-translate-y-1"
+                key={index}
+                className="relative group"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
-                {/* Icon */}
-                <div className="relative w-16 h-16 mx-auto mb-6">
-                  <div
-                    className={`absolute inset-0 rounded-full bg-gradient-to-r ${item.ring} opacity-20`}
-                  />
-                  <div
-                    className={`relative w-full h-full rounded-full ${item.bg}
-                                flex items-center justify-center`}
-                  >
-                    <Icon className={`text-xl ${item.color}`} />
+                {/* Feature Card - Just slightly smaller */}
+                <div className={`
+                  relative bg-white rounded-xl p-6 border border-gray-200
+                  transition-all duration-300 ease-out
+                  group-hover:scale-[1.02] group-hover:shadow-lg
+                  h-full flex flex-col
+                  ${isHovered ? 'shadow-md' : 'shadow-sm'}
+                `}>
+                  
+                  {/* Icon Container - Just slightly smaller */}
+                  <div className={`
+                    w-14 h-14 rounded-xl ${item.iconBg} mb-6
+                    flex items-center justify-center
+                    transition-transform duration-300
+                    group-hover:scale-105
+                  `}>
+                    <div className={`p-3 rounded-lg ${item.color}`}>
+                      <Icon className="text-xl" />
+                    </div>
                   </div>
-                </div>
 
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm mt-3 leading-relaxed">
-                  {item.desc}
-                </p>
+                  {/* Title with animated underline - kept but smaller */}
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 relative inline-block">
+                    {item.title}
+                    <span className={`
+                      absolute -bottom-1 left-0 w-0 h-0.5 ${item.gradient}
+                      transition-all duration-300
+                      group-hover:w-full
+                    `}></span>
+                  </h3>
+
+                  {/* Description - Just slightly smaller */}
+                  <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             );
           })}
         </div>
 
+        {/* Optional: Keep the CTA if needed */}
+        {/* <div className="text-center mt-16">
+          <button className="
+            inline-flex items-center gap-2 px-6 py-3
+            bg-gradient-to-r from-green-500 to-emerald-600
+            text-white font-semibold rounded-xl
+            shadow-md shadow-green-500/25
+            hover:shadow-lg hover:shadow-green-500/40
+            transform hover:-translate-y-0.5
+            transition-all duration-300
+          ">
+            <span>Explore All Features</span>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </button>
+        </div> */}
       </div>
     </section>
   );
 }
-
-
-
-

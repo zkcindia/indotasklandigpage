@@ -161,10 +161,11 @@ import {
   FaTwitter,
   FaEnvelope
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-gray-400 w-full">
+    <footer className="bg-black text-gray-400 w-full px-4">
 
       {/* TOP SECTION */}
       <div className="w-full max-w-7xl mx-auto py-20">
@@ -199,20 +200,43 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-medium mb-5">Product</h3>
               <ul className="space-y-3 text-sm">
-                <li className="hover:text-white cursor-pointer">Tasks</li>
-                <li className="hover:text-white cursor-pointer">Employees</li>
-                <li className="hover:text-white cursor-pointer">Verification</li>
-                <li className="hover:text-white cursor-pointer">Reports</li>
+                <li className="">Tasks</li>
+                <li className="">Employees</li>
+                <li className="">Verification</li>
+                <li className="">Reports</li>
               </ul>
             </div>
 
             <div>
               <h3 className="text-white font-medium mb-5">Company</h3>
               <ul className="space-y-3 text-sm">
-                <li className="hover:text-white cursor-pointer">About</li>
-                <li className="hover:text-white cursor-pointer">Contact</li>
-                <li className="hover:text-white cursor-pointer">Privacy</li>
-                <li className="hover:text-white cursor-pointer">Terms</li>
+
+                <li>
+  <Link to="/about" className="hover:text-white transition">
+    About
+  </Link>
+</li>
+
+<li>
+  <Link to="/features" className="hover:text-white transition">
+    Features
+  </Link>
+</li>
+<li>
+  <Link to="/contactus" className="hover:text-white transition">
+    Contact
+  </Link>
+</li>
+
+<li>
+  <Link to="/terms" className="hover:text-white transition">
+    Terms
+  </Link>
+</li>
+
+
+                {/* <li className="hover:text-white cursor-pointer">Privacy</li>
+                <li className="hover:text-white cursor-pointer">Terms</li> */}
               </ul>
             </div>
           </div>
@@ -241,7 +265,7 @@ export default function Footer() {
         <div className="w-full max-w-7xl mx-auto
                         flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} IndoTask. All rights reserved.
+            © {new Date().getFullYear()} Zkc India. All rights reserved.
           </p>
 
           <p className="text-xs text-gray-500">

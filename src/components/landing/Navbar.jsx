@@ -1,21 +1,23 @@
 // src/components/landing/Navbar.jsx
 import React, { useState } from "react";
 import { FaBars, FaXmark, FaListCheck } from "react-icons/fa6";
+import ContactUs from "../pages/ContactUs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Features", href: "#features" },
-    { name: "Live Demo", href: "#demo" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "FAQ", href: "#faq" },
+    { name: "Home", href: "/" },
+    { name: "Features", href: "/features" },
+        {name: "About Us", href: "/about"},
+    {name: "Contact Us", href: "/contactus"},
+    // { name: "Live Demo", href: "#demo" },
+    // { name: "Pricing", href: "#pricing" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm px-4">
       <div className="mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -47,12 +49,18 @@ const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">
+            {/* <button className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200">
               Sign in
-            </button>
-            <button className="px-5 py-2 bg-blue-600 text-white text-sm font-medium rounded-xl hover:bg-blue-700 transition-colors duration-200 shadow-sm hover:shadow">
-              Launch App →
-            </button>
+            </button> */}
+<button
+  onClick={() => window.location.href = "https://app.indotask.com"}
+  className="px-5 py-2 bg-blue-600 text-white text-sm font-medium rounded-xl
+             hover:bg-blue-700 transition-colors duration-200
+             shadow-sm hover:shadow"
+>
+  Launch App →
+</button>
+
           </div>
 
           {/* Mobile Menu Button */}

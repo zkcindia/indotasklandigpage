@@ -7,21 +7,21 @@ import {
 
 export default function Advantage() {
   return (
-    <section className="w-full max-w-7xl mx-auto bg-white py-16">
+    <section className="w-full max-w-7xl mx-auto bg-white py-16 px-4">
       {/* Top section */}
       <div className="flex flex-col lg:flex-row items-start justify-between gap-10 mb-14">
         <div>
           {/* <p className="text-blue-600 text-sm font-semibold uppercase mb-2">
             Advantage
           </p> */}
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-            The ultimate solution <br /> for any task workflow
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            The ultimate solution for any task workflow :
           </h2>
         </div>
 
-        <button className="self-start bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+        {/* <button className="self-start bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
           Explore More
-        </button>
+        </button> */}
       </div>
 
       {/* Cards */}
