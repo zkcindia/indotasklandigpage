@@ -265,7 +265,7 @@ export default function Footer() {
         <div className="w-full max-w-7xl mx-auto
                         flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Zkc India. All rights reserved.
+            © {new Date().getFullYear()} ZKC India. All rights reserved.
           </p>
 
           <p className="text-xs text-gray-500">

@@ -86,7 +86,7 @@ export default function Contact() {
                   href="tel:+919876543210" 
                   className="text-gray-900 font-medium hover:text-blue-600 transition-colors text-lg"
                 >
-                  +91 98765 43210
+                  +91 9876543210
                 </a>
                 <div className="mt-4 inline-flex items-center gap-2 text-xs text-gray-400">
                   <div className="w-2 h-2 rounded-full bg-blue-400"></div>
@@ -105,15 +105,16 @@ export default function Contact() {
                   <FaBuilding className="text-orange-600 text-xl" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-                <p className="text-gray-500 text-sm mb-4">Meet us in person</p>
+                <p className="text-gray-500 text-sm mb-4">ZKC India Pvt Ltd</p>
                 <div className="text-gray-700">
-                  <p className="font-medium">Bhubaneswar, Odisha</p>
+                  <p className="font-medium">Bapuji Nagar,
+                    <br />Bhubaneswar, Odisha</p>
                   <p className="text-sm text-gray-500">India – 751024</p>
                 </div>
-                <div className="mt-4 inline-flex items-center gap-2 text-xs text-gray-400">
+                {/* <div className="mt-4 inline-flex items-center gap-2 text-xs text-gray-400">
                   <div className="w-2 h-2 rounded-full bg-orange-400"></div>
                   Schedule a visit
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
