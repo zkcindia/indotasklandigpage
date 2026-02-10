@@ -50,7 +50,7 @@ const LiveDemoSection = () => {
               />
             </div>
 
-            {/* CTA */}
+            {/* CTA part */}
             <button className="mt-10 inline-flex items-center gap-3 px-6 py-3 rounded-xl
                                bg-green-600 text-white font-medium
                                hover:bg-green-700 transition">
