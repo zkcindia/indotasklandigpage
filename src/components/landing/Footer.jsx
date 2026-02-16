@@ -198,13 +198,13 @@ export default function Footer() {
           {/* LINKS */}
           <div className="grid grid-cols-2 gap-14">
             <div>
-              <h3 className="text-white font-medium mb-5">Product</h3>
-              <ul className="space-y-3 text-sm">
+              {/* <h3 className="text-white font-medium mb-5">Product</h3> */}
+              {/* <ul className="space-y-3 text-sm">
                 <li className="">Tasks</li>
                 <li className="">Employees</li>
                 <li className="">Verification</li>
                 <li className="">Reports</li>
-              </ul>
+              </ul> */}
             </div>
 
             <div>
@@ -250,11 +250,11 @@ export default function Footer() {
               and feature announcements.
             </p>
 
-            <div className="flex items-center gap-6 text-2xl">
+            {/* <div className="flex items-center gap-6 text-2xl">
               <FaGithub className="hover:text-white transition cursor-pointer" />
               <FaLinkedin className="hover:text-white transition cursor-pointer" />
               <FaTwitter className="hover:text-white transition cursor-pointer" />
-            </div>
+            </div> */}
           </div>
 
         </div>

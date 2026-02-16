@@ -48,7 +48,7 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center mb-12">
-<button
+{/* <button
   onClick={() =>
     document.getElementById("pricing")?.scrollIntoView({
       behavior: "smooth",
@@ -57,15 +57,15 @@ const HeroSection = () => {
   className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition"
 >
   Start Free Trial
-</button>
+</button> */}
 
             
-<WatchDemoPopup>
+{/* <WatchDemoPopup>
   <button className="px-8 py-3 bg-white text-gray-800 font-semibold rounded-xl border border-gray-300 hover:border-blue-400 flex items-center transition">
     <FaPlay className="mr-3 text-blue-600" />
     Watch Demo
   </button>
-</WatchDemoPopup>
+</WatchDemoPopup> */}
           </div>
           
           {/* FEATURES */}

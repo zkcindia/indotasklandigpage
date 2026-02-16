@@ -99,8 +99,8 @@
 
 
 // src/App.jsx
-import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useState , useEffect } from "react";
+import { Routes, Route , useLocation } from "react-router-dom";
 
 import Navbar from "./components/landing/Navbar";
 import HeroSection from "./components/landing/HeroSection";
@@ -119,6 +119,11 @@ import Terms from "./components/pages/Terms";
 
 export default function TeamForTasksSite() {
   const [billingAnnual, setBillingAnnual] = useState(true);
+  const location = useLocation();
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <Routes>
@@ -132,9 +137,9 @@ export default function TeamForTasksSite() {
             <HeroSection />
             <FeaturesSection />
             <LiveDemoSection />
-<section id="pricing" className="scroll-mt-24">
+{/* <section id="pricing" className="scroll-mt-24">
   <PricingSection />
-</section>
+</section> */}
 
             <OrganizeTasksSection />
             <Advantage />
