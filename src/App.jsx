@@ -137,9 +137,9 @@ export default function TeamForTasksSite() {
             <HeroSection />
             <FeaturesSection />
             <LiveDemoSection />
-{/* <section id="pricing" className="scroll-mt-24">
+<section id="pricing" className="scroll-mt-24">
   <PricingSection />
-</section> */}
+</section>
 
             <OrganizeTasksSection />
             <Advantage />

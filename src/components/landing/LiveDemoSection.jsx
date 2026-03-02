@@ -51,12 +51,21 @@ const LiveDemoSection = () => {
             </div>
 
             {/* CTA part */}
-            {/* <button className="mt-10 inline-flex items-center gap-3 px-6 py-3 rounded-xl
-                               bg-green-600 text-white font-medium
-                               hover:bg-green-700 transition">
-              <FaAndroid className="text-xl" />
-              Android App
-            </button> */}
+<button
+  onClick={() =>
+    window.open(
+      "https://play.google.com/store/apps/details?id=team.task.newapp&hl=en_IN",
+      "_blank"
+    )
+  }
+  className="mt-2 inline-flex items-center gap-3 px-6 py-3 rounded-xl
+             bg-green-600 text-white font-medium
+             hover:bg-green-700 transition"
+>
+  <FaAndroid className="text-xl" />
+  Android App
+</button>
+
           </div>
 
           {/* RIGHT SIDE – SINGLE APP IMAGE */}
